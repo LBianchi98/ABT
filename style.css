@@ -8,7 +8,7 @@ body {
 .parallax {
     display: grid; 
     width: 100%;
-    height: 135vh;
+    height: 120vh;
     overflow: hidden;
 }
 
@@ -42,7 +42,6 @@ img {
 .van{
     place-self: end end; 
     z-index: 1; 
-    margin-right: 100px;
     transform: translateY(1000px);
 }
 .animate{
@@ -88,7 +87,7 @@ img {
 }
 .image{
     padding: 50px!important;
-    background-image: url(assetes/SP_Case_Abt_XNH_2-scaled.png);
+    background-image: url(assetes/SP_Case_lines.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
