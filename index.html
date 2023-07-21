@@ -1,0 +1,79 @@
+<html>
+    <head> 
+        <title>ABT</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <img src="assetes/Rectangle 899.png" width="100%">
+        <div class="container ">
+                <div class="row mx-0 justify-content-center tabs">
+                    <div class="aufgabe">AUFGABE</div>
+                    <div class="stratrgie">STRATRGIE</div>
+                </div>
+        </div>
+        <div class="parallax">
+            <div class="container">
+                <div class="row">
+                    <diiv class="col-xl-4 offset-xl-1 tab-content">
+                        <div class="subtitle">DIE AUFGABE</div>
+                    <div class="title">XNH</div>
+                    <div class="content">
+                        <p>ABT ist Rennstrecke.</p>
+                        <p>ABT ist Fahrzeugveredelung. </p>
+                        <p>ABT ist Camping. Camping? Exakt.</p>
+                        <div class="text">
+                            Die Allgäuer begeben sich auf neues Terrain. Zumindest teilweise: Denn selbstverständlich kommt das umfassende Know-how der Edelschmiede beim hochwertigen Umbau zum Tragen. Um den exklusiven Dual Use Van an all die Freiheitsliebenden da draußen zu bringen, durften wir gemeinsam mit ABT eine komplett neue Marke erschaffen.
+                        </div>
+                    </div>
+                    </diiv>
+                </div>
+            </div>
+            <img src="assetes/carlos-torres-MHNjEBeLTgw-unsplash.png" />
+            <img src="assetes/dino-reichmuth-zlV1Ksvifvs-unsplash-1.png" class="mountain" width="100%" data-speed="0.4"/>
+            <img src="assetes/dino-reichmuth-zlV1Ksvifvs-unsplash-2.png" class="trees" width="100%" data-speed="0.3"/>
+            <img src="assetes/Vector 1.png" width="100%" style="z-index: 1;"/>
+            <img src="assetes/Vector 2.png" width="100%" style="z-index: 1;" class="vector2"/>
+            <img src="assetes/SP_Case_Abt_XNH_4-scaled 1.png" class="van"/>
+        </div>
+        <div class="hero">
+            <div class="container">
+                <div class="row mx-0">
+                    <div class="col-6 image">
+                        <img src="assetes/SP_Case_Abt_XNH_2-scaled 1.png" width="100%"/>
+                    </div>
+                    <div class="col-6 content d-flex justify-content-center flex-column">
+                        <div class="flyer-title">Die Broschüre</div>
+                        <div class="flyer-content">Die Broschüre vermittelt das <strong>XNH-Gefühl</strong>. Dabei zeigt sie alle Highlights.</div>
+                    </div>
+                </div>
+        </div>
+        </div>
+        <div class="collage">
+            <img src="assetes/Rectangle 1386.png" alt="Image 1" id="collage-image-1">
+            <img src="assetes/wawad-scaled 1.png" alt="Image 2" id="collage-image-2">
+            <img src="assetes/Rectangle 1387.png" alt="Image 3" id="collage-image-3">
+            <img src="assetes/Rectangle 1388.png" alt="Image 4" id="collage-image-4">
+            <img src="assetes/Rectangle 1389.png" alt="Image 5" id="collage-image-5">
+        </div>    
+        <script>
+            function parallaxEffect() {
+                const scrolled = window.pageYOffset;
+                const mountains = document.querySelector('.mountain');
+                const trees = document.querySelector('.trees');
+
+                if(scrolled >= 820){
+                    const speed = mountains.getAttribute('data-speed');
+                mountains.style.transform = `translateY(${(scrolled-820) * speed}px)`;
+
+                const treesSpeed = trees.getAttribute('data-speed');
+                trees.style.transform = `translateY(${(scrolled-820) * treesSpeed}px)`;
+                document.querySelector('.van').classList.add('animate');
+                }
+            }
+
+            window.addEventListener('scroll', parallaxEffect);
+        </script>
+    </body>
+</html>
