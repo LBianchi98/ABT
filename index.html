@@ -53,8 +53,8 @@
         <div class="collage">
             <img src="assetes/Rectangle 1386.png" alt="Image 1" id="collage-image-1">
             <img src="assetes/wawad-scaled 1.png" alt="Image 2" id="collage-image-2">
-            <img src="assetes/Rectangle 1387.png" alt="Image 3" id="collage-image-3">
-            <img src="assetes/Rectangle 1388.png" alt="Image 4" id="collage-image-4">
+            <img src="assetes/Rectangle 1387.png" alt="Image 3" id="collage-image-3" data-speed="0.2">
+            <img src="assetes/Rectangle 1388.png" alt="Image 4" id="collage-image-4" data-speed="0.2">
             <img src="assetes/Rectangle 1389.png" alt="Image 5" id="collage-image-5">
         </div>    
         <script>
@@ -62,6 +62,9 @@
                 const scrolled = window.pageYOffset;
                 const mountains = document.querySelector('.mountain');
                 const trees = document.querySelector('.trees');
+                const image1 = document.querySelector('#collage-image-3');
+                const image2 = document.querySelector('#collage-image-4');
+
 
                 if(scrolled >= 820){
                     const speed = mountains.getAttribute('data-speed');
@@ -70,6 +73,11 @@
                 const treesSpeed = trees.getAttribute('data-speed');
                 trees.style.transform = `translateY(${(scrolled-820) * treesSpeed}px)`;
                 document.querySelector('.van').classList.add('animate');
+                }
+                if(scrolled >= 2750){
+                    const speed = image1.getAttribute('data-speed');
+                    image1.style.transform = `translateY(${(scrolled-2750) * speed}px)`;
+                    image2.style.transform = `translateY(${-(scrolled-2750) * speed}px)`;
                 }
             }
 
